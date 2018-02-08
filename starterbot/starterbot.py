@@ -12,10 +12,10 @@ import nltk
 BOT_ID = 'none'
 
 # instantiate Slack & Twilio clients
-slack_client = SlackClient('BotToken')
+slack_client = SlackClient('TOKEN')
 
 # openweathermap api Token
-OWMapitoken = 'WeatherToken'
+OWMapitoken = 'TOKEN'
 
 # constants
 #AT_BOT = "<@" + BOT_ID + ">"
