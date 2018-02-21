@@ -1,18 +1,16 @@
-language: generic
-
+language: php
 php: 
   - 5.5
   - 5.6
   - 7.0
-
-install: skip
+  - hhvm
   
  before_script: 
-  - gem install rake
+  - composer self-update
+  - composer install --prefer-source --no-interaction --dev
   
  script: 
-  - bundle exec thor build
-  - test_folder/test.phpt 
+  - phpunit test_folder/test.phpt 
   
  deploy:
   provider: s3
