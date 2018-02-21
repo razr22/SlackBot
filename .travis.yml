@@ -11,4 +11,5 @@ install: skip
   - gem install rake
   
  script: 
+  - bundle exec thor build
   - test_folder/test.phpt 
