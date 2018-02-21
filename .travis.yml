@@ -1,19 +1,26 @@
-language: php
+ language: php
   php:
   - '5.5'
   - '5.6'
   - '7.0'
   - hhvm
-=======
-php:
+ =======
+ php:
   - 5.5
   - 5.6
   - 7.0
   - hhvm
+  - nightly
+
+ notifications:
+  email: false
+
+ install: php vendor/vendors.php
 
  before_script:
   - composer self-update
   - composer install --prefer-source --no-interaction --dev
-
+  - curl -sSfL -o ~/.phpenv/versions/hhvm/bin/phpunit https://phar.phpunit.de/phpunit-5.7.phar
+ 
  script:
   - phpunit test_folder/test.phpt
