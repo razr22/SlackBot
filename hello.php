@@ -3,6 +3,11 @@
   <title>PHP Test</title>
  </head>
  <body>
- <?php echo '<p>Hello World</p>'; ?> 
+<?php
+function boo($far)
+{
+  return $far;
+}
+?>
  </body>
 </html>
