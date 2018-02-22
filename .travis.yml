@@ -21,9 +21,8 @@ after_success:
  
 deploy:
   provider: s3
-  access_key_id: AKIAJMPXKY3TCIDIEGTA 
-  secret_access_key:
-    secure: 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
+  access_key_id: AKIAJIV26GAWMWFHNI2A 
+  secret_access_key: 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
   bucket: cps847group6
   local-dir: 
   region: us-east-2
