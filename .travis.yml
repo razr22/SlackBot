@@ -7,6 +7,9 @@ php:
 
 notifications:
   email: false
+
+before_script:
+  - curl -sSfL -o ~/.phpenv/versions/hhvm/bin/phpunit https://phar.phpunit.de/phpunit-5.7.phar
  
 script:
   - phpunit 
