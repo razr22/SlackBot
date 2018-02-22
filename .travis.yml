@@ -18,6 +18,6 @@ deploy:
   access_key_id: AKIAJMPXKY3TCIDIEGTA 
   secret_access_key:
     secure: jjCvOK43zV4PobsICs+SAxLF6iGVCEFHSifHWKDJ
-  bucket: avm-example.com
-  local-dir: s3_play/sample_html
-  region: us-west-2
+  bucket: cps847group6
+  local-dir: index_html
+  region: us-east-2
