@@ -1,5 +1,6 @@
 <?php
-//use PHPUnit\Framework\TestCase;
+use PHPUnit\Framework\TestCase;
+
 include_once("hello.php");
 
 	class Output extends \PHPUnit_Framework_TestCase {
