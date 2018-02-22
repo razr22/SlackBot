@@ -9,9 +9,13 @@ notifications:
 
 before_script:
   - curl -sSfL -o ~/.phpenv/versions/hhvm/bin/phpunit https://phar.phpunit.de/phpunit-5.7.phar
- 
+  - travis_retry composer self-update
+  - travis_retry composer install --no-interaction --prefer-source --dev
+
+
 script:
   - phpunit testfolder/output.php
+  - phpunit --coverage-clover=coverage.xml
   
 after_success:
   - bash <(curl -s https://codecov.io/bash) -t ffc95a1a-2b57-48c5-8a71-c7bb784196a9
@@ -22,5 +26,5 @@ deploy:
   secret_access_key:
     secure: jjCvOK43zV4PobsICs+SAxLF6iGVCEFHSifHWKDJ
   bucket: cps847group6
-  local-dir: hi
+  local-dir: 
   region: us-east-2
