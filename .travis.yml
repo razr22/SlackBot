@@ -9,4 +9,4 @@ notifications:
   email: false
  
 script:
-  - phpunit test_folder/test.phpt
+  - phpunit 
