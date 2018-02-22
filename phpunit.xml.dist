@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<phpunit bootstrap="autoload.php">
+<phpunit>
     <testsuites>
         <testsuite name="Example">
             <file>./testfolder/output.php</file>
