@@ -14,7 +14,7 @@ script:
   - phpunit testfolder/output.php
   
 after_success:
- - bash <(curl -s https://codecov.io/bash) -t ffc95a1a-2b57-48c5-8a71-c7bb784196a9
+  - bash <(curl -s https://codecov.io/bash) -t ffc95a1a-2b57-48c5-8a71-c7bb784196a9
  
 deploy:
   provider: s3
