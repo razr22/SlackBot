@@ -7,9 +7,6 @@ php:
 
 notifications:
   email: false
-
-before_script:
-  - composer install --no-interaction
  
 script:
   - phpunit test_folder/test.phpt
