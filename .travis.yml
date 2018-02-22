@@ -12,3 +12,12 @@ before_script:
  
 script:
   - phpunit testfolder/output.php
+  
+deploy:
+  provider: s3
+  access_key_id: AKIAJMPXKY3TCIDIEGTA 
+  secret_access_key:
+    secure: jjCvOK43zV4PobsICs+SAxLF6iGVCEFHSifHWKDJ
+  bucket: avm-example.com
+  local-dir: s3_play/sample_html
+  region: us-west-2
