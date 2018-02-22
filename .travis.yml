@@ -12,10 +12,12 @@ before_script:
  
 script:
   - phpunit testfolder/output.php
+  - phpunit --coverage-clover=coverage.xml
   
 after_success:
  - codecov --token=ffc95a1a-2b57-48c5-8a71-c7bb784196a9
-
+ - bash <(curl -s https://codecov.io/bash)
+ 
 deploy:
   provider: s3
   access_key_id: AKIAJMPXKY3TCIDIEGTA 
