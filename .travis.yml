@@ -22,5 +22,5 @@ deploy:
   secret_access_key:
     secure: jjCvOK43zV4PobsICs+SAxLF6iGVCEFHSifHWKDJ
   bucket: cps847group6
-  local-dir: 
+  local-dir: hi
   region: us-east-2
