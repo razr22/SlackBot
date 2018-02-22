@@ -13,6 +13,9 @@ before_script:
 script:
   - phpunit testfolder/output.php
   
+after_success:
+ - codecov --token=
+
 deploy:
   provider: s3
   access_key_id: AKIAJMPXKY3TCIDIEGTA 
