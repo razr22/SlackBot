@@ -17,4 +17,5 @@ declare(strict_types=1);
 
 	$test = new Student('Zain Quraishi');
 	echo $test->newStudent();
+	echo $test->getName() . "\n";
 ?>
