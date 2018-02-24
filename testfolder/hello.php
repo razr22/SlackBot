@@ -7,7 +7,7 @@ declare(strict_types=1);
 			$this->name = $name;
 		}
 		public function getName() {
-			return $this->name;
+			return $this->name . "\n";
 		}
 	
 		public function newStudent(){
@@ -17,5 +17,5 @@ declare(strict_types=1);
 
 	$test = new Student('Zain Quraishi');
 	echo $test->newStudent();
-	echo $test->getName() . "\n";
+	echo $test->getName();
 ?>
