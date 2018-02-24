@@ -1,6 +1,4 @@
 <?php
-declare(strict_types=1);
-
 include_once("hello.php");
 
 	class Output extends \PHPUnit_Framework_TestCase {
