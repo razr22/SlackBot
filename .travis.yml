@@ -1,27 +1,23 @@
 language: php
-
 php:
-  - 5.5
-  - 5.6
-
+- 5.5
+- 5.6
 notifications:
   email: false
-
 before_script:
-  - curl -sSfL -o ~/.phpenv/versions/hhvm/bin/phpunit https://phar.phpunit.de/phpunit-5.7.phar
-  - travis_retry composer self-update
-
-
+- curl -sSfL -o ~/.phpenv/versions/hhvm/bin/phpunit https://phar.phpunit.de/phpunit-5.7.phar
+- travis_retry composer self-update
 script:
-  - phpunit testfolder/output.php
-  - phpunit --coverage-clover coverage.xml
-  
+- phpunit testfolder/output.php
+- phpunit --coverage-clover coverage.xml
 after_success:
-  - bash <(curl -s https://codecov.io/bash) 
- 
+- bash <(curl -s https://codecov.io/bash)
 deploy:
   provider: s3
   access_key_id: AKIAIGLXERS3VFLEZAVQ
-  secret_access_key: 
-    secure: "ZRrxj4ifqtWoy6NBu8xFHrmIUHA/AhioZJhzPmQOwepuLYHf3hVWOJKegHkv6xnXvjpZusc/GEP2rBokTLnq3bDjBO9qdjTKPt/09br9e2X+jlwHW4y+XoTNMbUbvE75I2mDf8Z+YFvG6IYMF3SGR3H2qWXUAdzJqM+p48yIzipmyYEL+yJkGps9ajoz6Q7PpkJV2PJ0A4VeM1IIfek1GV2/+JERG4RvEbpmBEGcMB/vZjwkGW3VMWfgS6gq+7+aQBsWvrRwO/cz8198pupAp1qLFn765NkFRdKXfGt5BJQ0fMTYbceslQdqr/Oi23jzRQeoP7Q4L/d3xBVRVBYPgR76MunwNouSCcmRXAsxzBKD7au+K7dW1KaS/iCfvs9/vp4uaLNyRu+1KSQy49Cj1dSAKSyIx7sPTOYb2Yi2h48WPXUaJ/oDrbAVj5JY5rmEFyAHBeED/NC4EvBLee5d4Wr6A0W157FpJFATqp62O0/MQc/r4KKJ+kiae/f4lDY81TDHGn5WSC15pjCzmyelLa1OY70x5QYdKxt9JjhKlAEGvL+IeSEqBskufrAj5RBoq4beN8MyIWkNQwiwMbc7utDxb1e/2iHxSKrORhqyiDRaCD/woK4tu+S67e+qh7RCXUQpDo06ACwfH/+tLX604Ak5R9K6DtdIUAF3+gmTbR4="
+  secret_access_key:
+    secure: ZRrxj4ifqtWoy6NBu8xFHrmIUHA/AhioZJhzPmQOwepuLYHf3hVWOJKegHkv6xnXvjpZusc/GEP2rBokTLnq3bDjBO9qdjTKPt/09br9e2X+jlwHW4y+XoTNMbUbvE75I2mDf8Z+YFvG6IYMF3SGR3H2qWXUAdzJqM+p48yIzipmyYEL+yJkGps9ajoz6Q7PpkJV2PJ0A4VeM1IIfek1GV2/+JERG4RvEbpmBEGcMB/vZjwkGW3VMWfgS6gq+7+aQBsWvrRwO/cz8198pupAp1qLFn765NkFRdKXfGt5BJQ0fMTYbceslQdqr/Oi23jzRQeoP7Q4L/d3xBVRVBYPgR76MunwNouSCcmRXAsxzBKD7au+K7dW1KaS/iCfvs9/vp4uaLNyRu+1KSQy49Cj1dSAKSyIx7sPTOYb2Yi2h48WPXUaJ/oDrbAVj5JY5rmEFyAHBeED/NC4EvBLee5d4Wr6A0W157FpJFATqp62O0/MQc/r4KKJ+kiae/f4lDY81TDHGn5WSC15pjCzmyelLa1OY70x5QYdKxt9JjhKlAEGvL+IeSEqBskufrAj5RBoq4beN8MyIWkNQwiwMbc7utDxb1e/2iHxSKrORhqyiDRaCD/woK4tu+S67e+qh7RCXUQpDo06ACwfH/+tLX604Ak5R9K6DtdIUAF3+gmTbR4=
   bucket: cps847-group06
+env:
+  global:
+    secure: iCQ7iMGCHk50mvb9bNQNxwwiQGd0BkkhRPDnVYO2LoqrVPBdhQO+g5DETvgDT2o+fFwUD2y9CexJVyqg/lGOYKejBfKy+JfIkb/QxxXkvXrxIP9aDP1rpqQBQdIZ/tBOvE2sjSfSU4sm/jxNzr9u+8LV1ygWVjd43C3kPMzzQENr4UPB7aZk8SYUfD5nlX6E4/voSzwPKHyC1FCdB/EYaO3ExS8ocYNPnREApA88gJMj0yCsR1xeVjgz9Ke4cPaTImprtfc/6GW1Bx3t9xqvjw1z+bw5uL6oHtD73mKuDdKhVCAoGkUQ+Pv3gozTclFHYyYfdV/B5tX3pwwOUGrnG+m0uU36SAThLJB2LA589ujI2YuNcuZy6w2lvkoElgZJAtK5A1YdjQ5h0bgRL6ePnOZ5YkilrMDx9AVN9wunJ4UxkNH2wJ67zdPQWWedZ+4w90ohoDlNB2ohBSuKhYyYIjJ7Fsv3xstVhGGSVi1bkPfpBGbyHgfqmtwPAs1hNv5mpwL9h6Qm8WUnhLFQhpRu9b7HSPnpb2lA6H5Mv4MT576mI4uta4+08dQlMMC9j8xVRI7kXHW2rUG3TCMBZhDIY1HFsIh0LhO8NJvcLf9I8lWqqyCbNj8JDOjUerV2Orob3YFqg/C/yxMvEWuGbwpKnfTEZk7SOdv7uICQabzVC3k=
