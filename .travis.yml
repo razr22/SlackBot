@@ -22,7 +22,6 @@ after_success:
 deploy:
   provider: s3
   access_key_id: AKIAIGLXERS3VFLEZAVQ
-  secret_access_key: MY_KEY
+  secret_access_key: 
+    secure: "ZRrxj4ifqtWoy6NBu8xFHrmIUHA/AhioZJhzPmQOwepuLYHf3hVWOJKegHkv6xnXvjpZusc/GEP2rBokTLnq3bDjBO9qdjTKPt/09br9e2X+jlwHW4y+XoTNMbUbvE75I2mDf8Z+YFvG6IYMF3SGR3H2qWXUAdzJqM+p48yIzipmyYEL+yJkGps9ajoz6Q7PpkJV2PJ0A4VeM1IIfek1GV2/+JERG4RvEbpmBEGcMB/vZjwkGW3VMWfgS6gq+7+aQBsWvrRwO/cz8198pupAp1qLFn765NkFRdKXfGt5BJQ0fMTYbceslQdqr/Oi23jzRQeoP7Q4L/d3xBVRVBYPgR76MunwNouSCcmRXAsxzBKD7au+K7dW1KaS/iCfvs9/vp4uaLNyRu+1KSQy49Cj1dSAKSyIx7sPTOYb2Yi2h48WPXUaJ/oDrbAVj5JY5rmEFyAHBeED/NC4EvBLee5d4Wr6A0W157FpJFATqp62O0/MQc/r4KKJ+kiae/f4lDY81TDHGn5WSC15pjCzmyelLa1OY70x5QYdKxt9JjhKlAEGvL+IeSEqBskufrAj5RBoq4beN8MyIWkNQwiwMbc7utDxb1e/2iHxSKrORhqyiDRaCD/woK4tu+S67e+qh7RCXUQpDo06ACwfH/+tLX604Ak5R9K6DtdIUAF3+gmTbR4="
   bucket: cps847-group06
-  local-dir: 
-  region: us-east-2
